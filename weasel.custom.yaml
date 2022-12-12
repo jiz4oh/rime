@@ -1,0 +1,27 @@
+# windows 发行版配置
+
+# 进入相关应用程序，转换为英文状态
+patch:
+  app_options:
+    devenv.exe:
+      ascii_mode: true
+    illustrator.exe:
+      ascii_mode: true
+    photoshop.exe:
+      ascii_mode: true
+    plantsvszombies:
+      ascii_mode: true
+    winkawaks.exe:
+      ascii_mode: true
+    sublime_text.exe:
+      ascii_mode: true
+    Code.exe:
+      ascii_mode: true
+
+  # 设定主题
+  "style/color_scheme": ink
+
+  # 设定显示托盘图标，在调配置时，方便右键图标快速执行“重新部署”，以及其它便捷入口。调配完日常使用就 false 隐藏掉吧。
+  # 没有托盘图标，Windows+R: $ "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\小狼毫輸入法"，里面有相关操作项
+  # Windows 10下已经发现问题：切换到小狼毫輸入法，Windows徽标就失灵，必须切换至其它输入法，Ctrl+Shift+Esc 中 “Windows 资源管理器” 鼠标右键“重新启动(R)”，才能正常使用。
+  "style/display_tray_icon": false

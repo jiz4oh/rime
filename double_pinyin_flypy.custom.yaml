@@ -1,0 +1,90 @@
+# # 小鹤双拼的自定义配置
+
+patch:
+  switches:
+    - name: ascii_mode
+      reset: 1
+      states: [ 中文, 英文 ]
+    - name: ascii_punct
+      states: [ 。，, ．， ]
+    - name: zh_simp
+      reset: 0
+      states: [ 汉字, 漢字 ]
+    - name: full_shape
+      reset: 0
+      states: [ 半角, 全角 ]
+## 此处注释 emoji
+  emoji_suggestion: false
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+  reverse_lookup: {}
+  recognizer:
+    import_preset: default
+    patterns:
+      punct: "^/([a-z]+|[0-9]0?)$"
+      html: "^<[a-z]+>$"
+      code: "[a-zA-Z]+(*$"
+      url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]{1,10}[.:_-].*$"
+
+  engine/translators:
+    - punct_translator
+    - script_translator
+    - table_translator@custom_phrase
+    - table_translator@custom_emojis
+  engine/filters:
+    - simplifier@emoji_suggestion
+    - simplifier@zh_simp
+    - uniquifier
+    # - charset_filter@gbk
+    - single_char_filter
+  # "translator/dictionary": pinyin_simp
+  # "translator/preedit_format": {}
+
+  ### 双拼使用自定义词典 custom_phrase.txt
+  custom_phrase:
+    dictionary: ""
+    user_dict: custom_phrase
+    db_class: tabledb
+    enable_completion: false
+    enable_sentence: false
+    initial_quality: 1
+
+  punctuator:
+    # 标点及特殊表情，引入 symbols 文件
+    import_preset: symbols
+    # 覆盖 symbols 文件对应 key
+    symbols:
+      "/dn": [⌘, ⌥, ⇧, ⌃, ⎋, ⇪, , ⌫, ⌦, ↩︎, ⏎, ↑, ↓, ←, →, ↖, ↘, ⇟, ⇞]
+      "/fh": [ ©, ®, ℗, ℠, ™, ℡, ⓘ, ♂, ♀, ☉, ☊, ☋, ☌, ☍, ☐, ☑︎, ☒, ☜, ☝, ☞, ☟, ✎, ✄, ♲, ♻, ⚐, ⚑, ⚠]
+      "/xh": [ ＊, ×, ✱, ★, ☆, ✩, ✧, ❋, ❊, ❉, ❈, ❅, ✿, ✲]
+      '/bq': ['😄', '😭',  '🙈',  '😁', '😅', '😆', '😉', '😊', '💩', '🙄', '😛', '😋', '😎', '😍', '😘', '😗', '😙', '😚', '🙂', '🤗', '😇', '🤓', '🤔', '😐', '😑', '😶', '😏', '😣', '😥', '😮', '🤐', '😯', '😪', '😫', '😴', '😌', '😜', '😝', '😒', '😓', '😔', '😕', '🙃', '🤑', '😲', '😷', '🤒', '🤕', '🙁', '😖', '😞', '😟', '😤', '😢','😦', '😧', '😨', '😩', '😬', '😰', '😱', '😳', '😵', '😡', '😠', '😈', '👿', '👹', '👺', '💀', '☠', '👻', '👽', '👾', '🤖', '💩', '😺', '😸', '😹', '😻', '😼', '😽', '🙀', '😿', '😾', '🙉', '🙊']
+      '/hh': '😂'
+      '/by': '🙄'
+      '/xx': '😛'
+      '/gj': '🤬'
+    half_shape:
+      "`": "·"
+      "~": "~"
+      "@": "@"
+      "#": "#"
+      "$": ["¥", "$", "€", "£", "¢", "¤"]
+      "%": "%"
+      "^": "……"
+      "*": ["*", "×", "·", "・", "※", "＊", "❂"]
+      "_": "——"
+      "=": "="
+      '\': "、"
+      "'":
+        pair:
+          - "‘"
+          - "’"
+      "|": "|"
+      "(": "（"
+      ")": "）"
+      "[": "【"
+      "]": "】"
+      "{": "「"
+      "}": "」"
+      "<": "《"
+      ">": "》"
+      "/": ["/", "÷"]

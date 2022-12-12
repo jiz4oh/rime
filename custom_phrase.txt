@@ -1,0 +1,80 @@
+# Rime table
+#@/db_name	custom_phrase.txt
+#@/db_type	tabledb
+#@/rime_version	1.5.3
+#@/tick	809
+Apple	apple	0
+	apple	0
+ MUSIC	applemusic	0
+ PAY	applepay	0
+ tv 4K	appletv	0
+ WATCH	applewatch	0
+🙅	bu	100022
+艹	cc	14
+⌘	cmd	2
+CSS	css	0
+⌃	ctl	0
+•	dm	51
+嗯呐	enn	6
+Google Analytics	ga	0
+GBK	gbk	0
+GitHub	github	24
+哈哈哈哈哈哈哈	hhh	89
+iMac	imac	1
+iOS	ios	0
+iPad	ipad	0
+iPad Air	ipad	0
+iPad Pro	ipad	0
+iPad mini	ipad	0
+iPhone	iphone	2
+iPhone X	iphonex	0
+iPod	ipod	0
+IPTV	iptv	0
+IPv4	ipv	1
+IPv6	ipv	0
+iTunes	itunes	0
+jQuery	jquery	0
+JavaScript	js	0
+可能	ken	1
+吗	m	1
+嘛	m	15
+吗	ma	560
+嘛	ma	158
+🐴	ma	3
+MacBook	macbook	0
+Mac mini	macmini	0
+macOS	macos	4
+macOS Catalina	macos	3
+macOS High Sierra	macos	1
+macOS Mojave	macos	2
+Mac Pro	macpro	0
+Mac App Store	mas	0
+MacBook Pro	mbp	0
+MySQL	mysql	0
+那就	naj	4
+🐂	nq	21
+牛逼	nqb	6
+👍	nqb	15
+👍	nqbi	20
+Objective-C	ojbc	0
+👌	ok	71
+⌥	opt	2
+OS X	osx	0
+Rime	rime	4
+http://rime.im/	rime	1
+中州韻輸入法引擎	rime	2
+Ruby	ruby	8
+Rust	rust	0
+⇧	shift	0
+SQL	sql	15
+Swift	swift	0
+U 盘	upj	0
+UTF-8	utfba	0
+WeChat	wechat	1
+Xbox One	xbox	0
+💩	xiang	0
+💩	xl	2
+X-Ray	xray	0
+Youku	youku	0
+YouTube	youtube	0
+又双叒叕	yyy	0
