@@ -25,6 +25,12 @@ patch:
       html: "^<[a-z]+>$"
       code: "[a-zA-Z]+(*$"
       url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]{1,10}[.:_-].*$"
+  translator:
+    dictionary: pinyin_simp       # 挂载词库 pinyin_simp.dict.yaml
+    prism: double_pinyin_flypy
+    contextual_suggestions: true  # 开启八股文
+    initial_quality: 1.2          # 拼音的权重应该比英文大
+    preedit_format: {}            # 保留原始的输入字符，不转化为全拼形式
 
   engine/translators:
     - punct_translator
