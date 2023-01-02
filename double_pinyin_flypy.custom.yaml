@@ -20,13 +20,6 @@ patch:
   opencc_config: emoji.json
   option_name: emoji_suggestion
   reverse_lookup: {}
-  recognizer:
-    import_preset: default
-    patterns:
-      punct: "^/([a-z]+|[0-9]0?)$"
-      html: "^<[a-z]+>$"
-      code: "[a-zA-Z]+(*$"
-      url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]{1,10}[.:_-].*$"
   translator:
     dictionary: pinyin_simp       # 挂载词库 pinyin_simp.dict.yaml
     prism: double_pinyin_flypy
