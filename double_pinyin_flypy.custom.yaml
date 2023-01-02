@@ -36,7 +36,6 @@ patch:
     - punct_translator
     - script_translator
     - table_translator@custom_phrase
-    - table_translator@custom_emojis
   engine/filters:
     - simplifier@emoji_suggestion
     - simplifier@zh_simp
