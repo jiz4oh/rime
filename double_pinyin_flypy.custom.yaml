@@ -5,20 +5,15 @@ patch:
     - name: ascii_mode
       reset: 1
       states: [ 中文, 英文 ]
-    - name: ascii_punct
-      states: [ 。，, ．， ]
-    - name: zh_simp
-      reset: 0
-      states: [ 汉字, 漢字 ]
+    - name: emoji
+      states: [ 💀, 😄 ]
+      reset: 1
     - name: full_shape
       reset: 0
       states: [ 半角, 全角 ]
     - options: [ _key_Hide ]
-      states: [ "▼"
+      states: [ "▼" ]
 ## 此处注释 emoji
-  emoji_suggestion: false
-  opencc_config: emoji.json
-  option_name: emoji_suggestion
   reverse_lookup: {}
   translator:
     dictionary: pinyin_simp       # 挂载词库 pinyin_simp.dict.yaml
@@ -32,7 +27,7 @@ patch:
     - script_translator
     - table_translator@custom_phrase
   engine/filters:
-    - simplifier@emoji_suggestion
+    - simplifier@emoji
     - simplifier@zh_simp
     - uniquifier
     # - charset_filter@gbk
@@ -40,14 +35,14 @@ patch:
   # "translator/dictionary": pinyin_simp
   # "translator/preedit_format": {}
 
-  ### 双拼使用自定义词典 custom_phrase.txt
+  ### 双拼使用自定义词典 custom_phrase_doble_pinyin.txt
   custom_phrase:
     dictionary: ""
-    user_dict: custom_phrase
-    db_class: tabledb
+    user_dict: custom_phrase_double_pinyin
+    db_class: stabledb
     enable_completion: false
     enable_sentence: false
-    initial_quality: 1
+    initial_quality: 99
 
   punctuator:
     # 标点及特殊表情，引入 symbols 文件

@@ -1,8 +1,8 @@
 # Rime table
-#@/db_name	custom_phrase.txt
+#@/db_name	custom_phrase_double_pinyin.txt
 #@/db_type	tabledb
 #@/rime_version	1.5.3
-#@/tick	811
+#@/tick	810
 Apple	apple	0
 CSS	css	0
 GBK	gbk	0
@@ -48,7 +48,7 @@ macOS	macos	4
 macOS Catalina	macos	3
 macOS High Sierra	macos	1
 macOS Mojave	macos	2
-•	dm	52
+•	dm	51
 ⇧	shift	0
 ⌃	ctl	0
 ⌘	cmd	2
