@@ -25,6 +25,9 @@ patch:
   engine/translators:
     - punct_translator
     - script_translator
+    - lua_translator@date_translator      # 时间、日期、星期
+    - table_translator@melt_eng           # 英文输入
+    - reverse_lookup_translator@liangfen  # 反查，两分拼字
     - table_translator@custom_phrase
   engine/filters:
     - simplifier@emoji
