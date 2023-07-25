@@ -42,7 +42,6 @@ switches:
 engine:
   processors:
     - lua_processor@select_character             # 以词定字
-    - lua_processor@code_length_limit_processor  # 限制码长
     - ascii_composer
     - recognizer
     - key_binder
@@ -60,7 +59,7 @@ engine:
   translators:
     - punct_translator
     - script_translator
-    - lua_translator@v_single_char_first_filter  # v 模式 symbols 优先（否则是英文优先）
+    - lua_translator@v_filter  # v 模式 symbols 优先（否则是英文优先）
     - lua_translator@date_translator             # 时间、日期、星期
     - table_translator@custom_phrase             # 自定义短语 custom_phrase.txt
     - table_translator@melt_eng                  # 英文输入
@@ -73,7 +72,6 @@ engine:
 
 
 # 限制码长，默认 100。（最多能输入的字符个数）
-code_length_limit_processor: 100
 
 
 # 日期、时间、星期、ISO 8601、时间戳的触发关键字
