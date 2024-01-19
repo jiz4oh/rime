@@ -49,6 +49,9 @@ patch:
     net.kovidgoyal.kitty:
       vim_mode: true
       ascii_mode: true
+    com.github.wez.wezterm:
+      vim_mode: true
+      ascii_mode: true
 
     # 在以下 app 中默认使用中文输入
     com.tdesktop.Telegram: # telegram 官网跨平台版
